@@ -8,7 +8,8 @@
 <CommonPage {title}>
 	<div class="resume">
 		{#if data}
-			<a href={data} download>
+			<iframe src={data} class="pdf-preview"></iframe>
+			<a href={data} download="resume.pdf">
 				<Chip size={'1.25em'}>Download</Chip>
 			</a>
 		{:else}
@@ -20,11 +21,20 @@
 <style lang="scss">
 	.resume {
 		display: flex;
-		justify-content: center;
+		flex-direction: column;
+		align-items: center;
 		margin-top: 20px;
+
+		.pdf-preview {
+			width: 100%;
+			height: 500px;
+			border: 1px solid #ccc;
+			margin-bottom: 10px;
+		}
 
 		& > a {
 			color: inherit;
+			text-decoration: none;
 		}
 	}
 </style>

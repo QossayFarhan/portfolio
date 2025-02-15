@@ -14,7 +14,7 @@ const Assets = {
 	Cpp: a('cpp.svg'),
 	Celery: a('celery.svg'),
 	Django: a('django.svg'),
-	FastApi: a('fastapi'),
+	FastApi: a('fastAPI.png'),
 	Flask: a('flask.svg'),
 	Go: a('go.svg'),
 	Kafka: a('kafka.svg'),
@@ -70,7 +70,22 @@ const Assets = {
 	Jest: a('jest.png'),
 	Unocss: a('unocss.svg'),
 	Ruvy: a('ruvy.svg'),
-	Postcss: a('postcss.svg')
+	Postcss: a('postcss.svg'),
+	azureAI: a('image.png'),
+	azure: a('azure.png'),
+	devops: a('devops.svg'),
+	docker: a('docker.png'),
+	ibm: a('ibm.png'),
+	k8s: a('k8s.png'),
+	openAI: a('openAI.jpeg'),
+	openShift: a('OpenShift.svg'),
+	Huggingface: a('hf.png'),
+	Terraform: a('tf.png'),
+	Github: a('Github.png'), 
+	te: a('te.png'),
+	cr: a('cr.png'),
+	unimy: a('unimy.png')
+
 };
 
 export default Assets;
