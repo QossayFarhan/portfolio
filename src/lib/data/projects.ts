@@ -33,7 +33,7 @@ export const items: Array<Project> = [
 			from: new Date()
 		},
 		skills: getSkills('svelte', 'ts', 'tailwind', 'sass'),
-		type: 'Website Template',
+		type: 'API',
 		screenshots: []
 	}
 ];
