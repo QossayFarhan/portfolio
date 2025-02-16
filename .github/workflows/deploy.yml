@@ -3,9 +3,9 @@ name: Deploy SvelteKit to GitHub Pages
 on:
   push:
     branches:
-      - master  # Adjust to 'main' if your default branch is named 'main'
+      - master
 
-  workflow_dispatch:  # Allows manual triggering of the workflow
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -26,10 +26,16 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20  # Use latest stable version
+          node-version: 20
+
+      - name: Clear npm Cache
+        run: npm cache clean --force
+
+      - name: Remove Conflicting ESLint Plugin
+        run: npm remove eslint-plugin-svelte3 || true
 
       - name: Install Dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps  # Prevent dependency conflicts
 
       - name: Build SvelteKit Site
         run: npm run build
@@ -37,7 +43,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: build  # Upload the SvelteKit build output
+          path: build
 
   deploy:
     runs-on: ubuntu-latest
