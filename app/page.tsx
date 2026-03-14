@@ -104,7 +104,7 @@ export default function Home() {
               <Linkedin className="w-5 h-5" />
             </Link>
             <motion.a
-              href="/Qossay%20Abuamriya%20AI%20Platform%20Engineer%20(3).pdf"
+              href="./Qossay%20Abuamriya%20AI%20Platform%20Engineer%20(3).pdf"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
@@ -165,7 +165,7 @@ export default function Home() {
               className="relative w-40 h-40 md:w-52 md:h-52 rounded-[2rem] overflow-hidden border-2 border-neutral-200 shadow-[0_8px_30px_-4px_rgba(0,0,0,0.12)] bg-neutral-100"
             >
               <Image
-                src="/portfolio-pic.jpeg"
+                src="./portfolio-pic.jpeg"
                 alt="Qossay Abuamriya"
                 fill
                 className="object-cover"
